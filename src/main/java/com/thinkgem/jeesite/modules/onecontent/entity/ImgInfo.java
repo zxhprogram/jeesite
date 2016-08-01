@@ -5,6 +5,7 @@ public class ImgInfo {
 	private String imgName;
 	private String imgText;
 	private int totalPage;
+	private int currentPage;
 	public Integer getSid() {
 		return sid;
 	}
@@ -28,6 +29,12 @@ public class ImgInfo {
 	}
 	public void setTotalPage(int totalPage) {
 		this.totalPage = totalPage;
+	}
+	public int getCurrentPage() {
+		return currentPage;
+	}
+	public void setCurrentPage(int currentPage) {
+		this.currentPage = currentPage;
 	}
 	
 }

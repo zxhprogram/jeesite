@@ -20,6 +20,7 @@ public class OneController {
 	public String test(HttpServletRequest req,Model model){
 		int page = Integer.valueOf(req.getParameter("page"));
 		ImgInfo imgInfo = service.queryImgInfoByPage(page);
+		imgInfo.setCurrentPage(page);
 		model.addAttribute("imgInfo", imgInfo);
 		return "onecontent/test";
 	}

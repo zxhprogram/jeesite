@@ -222,11 +222,12 @@ body.custom-background {
 				<div class="pagination">
 					<p class="clearfix">
 					<div class='wp-pagenavi'>
-						<span class='pages'>第 2 页，共 ${imgInfo.totalPage} 页</span><a
-							class="previouspostslink" rel="prev" href="#">«</a><a
+						<span class='pages'>第 ${imgInfo.currentPage} 页，共 ${imgInfo.totalPage} 页</span><a
+							class="previouspostslink" rel="prev" href="#">«</a>
+							<a
 							class="page smaller" href="#">1</a><span class='current'>2</span><a
-							class="page larger" href="#">3</a><a class="page larger" href="#">4</a><a
-							class="page larger" href="http://caodan.org/page/5">5</a><a
+							class="page larger" href="#">2</a><a class="page larger" href="#">2</a><a
+							class="page larger" href="http://localhost:8080/jeesite/one/test?page=1">5</a><a
 							class="page larger" href="http://caodan.org/page/6">6</a><a
 							class="page larger" href="http://caodan.org/page/7">7</a><a
 							class="page larger" href="http://caodan.org/page/8">8</a><a
