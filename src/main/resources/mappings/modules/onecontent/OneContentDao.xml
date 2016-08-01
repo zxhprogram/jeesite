@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.onecontent.dao.OneContentDao">
+	<select id="queryImgInfoByPage" parameterType="int" resultType="com.thinkgem.jeesite.modules.onecontent.entity.ImgInfo">
+		select 
+			sid as sid,imgName as imgName,imgText as imgText,(select count(sid) from imginfo) as totalPage from imginfo 
+		limit
+			#{page},1
+	</select>
+</mapper>
