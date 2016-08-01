@@ -24,6 +24,11 @@ public class JdbcUtils {
 	public JdbcUtils(){
 		try {
 			Class.forName(DRIVER);
+			try {
+				conn = DriverManager.getConnection(DATAURL,USERNAME,PASSWORD);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 			System.out.println("数据库初始化成功!!!");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
