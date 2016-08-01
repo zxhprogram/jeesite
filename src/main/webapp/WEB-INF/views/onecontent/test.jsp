@@ -48,7 +48,6 @@ body.custom-background {
 }
 </style>
 </head>
-
 <body class="home blog paged custom-background paged-2">
 	<div id="wrapper">
 		<div id="navigation">
@@ -76,22 +75,16 @@ body.custom-background {
 		</div>
 		<!-- /#navigation -->
 		<div id="navigation-frill"></div>
-
 		<div id="header">
 			<h1>
 				<a href="http://caodan.org/" title="ONE·一个" rel="home">ONE·一个</a>
 			</h1>
-
 			<div id="description">
 				<p>每天只为你准备一张图画，一篇文字和一个问答。</p>
 			</div>
 		</div>
 		<!-- /#header -->
-
 		<div id="content">
-
-
-
 			<div id="posts-wrapper">
 
 				<div id="post-4278"
@@ -104,7 +97,6 @@ body.custom-background {
 							</p>
 						</a>
 					</div>
-
 					<div class="content">
 						<h1 class="entry-title">
 							<a href="http://caodan.org/1389-photo.html" rel="bookmark">VOL.1389
@@ -127,24 +119,18 @@ body.custom-background {
 						<!-- .entry-content -->
 					</div>
 					<!-- .content -->
-
 					<div class="info">
-
-
 						<p>
 							<span class="permalink"><a
 								href="http://caodan.org/1389-photo.html" rel="bookmark">Permalink</a></span>
-
 							<span class="notes"><a
 								href="http://caodan.org/1389-photo.html#respond"
 								class="ds-thread-count" data-thread-key="4278">Leave a
 									comment</a></span>
 						</p>
-
 					</div>
 				</div>
 				<!-- /.post -->
-
 				<div id="post-4279"
 					class="post-4279 post type-post status-publish format-standard hentry category-content">
 					<div class="date">
@@ -155,7 +141,6 @@ body.custom-background {
 							</p>
 						</a>
 					</div>
-
 					<div class="content">
 						<h1 class="entry-title">
 							<a href="http://caodan.org/1389-content.html" rel="bookmark">VOL.1389
@@ -177,10 +162,7 @@ body.custom-background {
 						<!-- .entry-content -->
 					</div>
 					<!-- .content -->
-
 					<div class="info">
-
-
 						<p>
 							<span class="permalink"><a
 								href="http://caodan.org/1389-content.html" rel="bookmark">Permalink</a></span>
@@ -190,11 +172,9 @@ body.custom-background {
 								class="ds-thread-count" data-thread-key="4279">Leave a
 									comment</a></span>
 						</p>
-
 					</div>
 				</div>
 				<!-- /.post -->
-
 				<div id="post-4280"
 					class="post-4280 post type-post status-publish format-standard hentry category-ask">
 					<div class="date">
@@ -206,7 +186,6 @@ body.custom-background {
 							</p>
 						</a>
 					</div>
-
 					<div class="content">
 						<h1 class="entry-title">
 							<a href="http://caodan.org/1389-ask.html" rel="bookmark">VOL.1389
@@ -215,7 +194,6 @@ body.custom-background {
 						<div class="entry-content">
 							<div class="cuestion-contenido">@一个App工作室
 								问：有哪个瞬间曾让你怀疑你和你的兄弟/闺蜜可能并没有那么要好？</div>
-
 							<div class="cuestion-a-icono"></div>
 							<h4>网友答@一个App工作室 ：</h4>
 							<div class="cuestion-contenido">
@@ -230,19 +208,14 @@ body.custom-background {
 						<!-- .entry-content -->
 					</div>
 					<!-- .content -->
-
 					<div class="info">
-
-
 						<p>
 							<span class="permalink"><a
 								href="http://caodan.org/1389-ask.html" rel="bookmark">Permalink</a></span>
-
 							<span class="notes"><a
 								href="http://caodan.org/1389-ask.html#comments"
 								class="ds-thread-count" data-thread-key="4280">1 Comment</a></span>
 						</p>
-
 					</div>
 				</div>
 				<!-- /.post -->
@@ -270,13 +243,10 @@ body.custom-background {
 				</div>
 			</div>
 			<!-- #post-wrapper -->
-
-
 		</div>
 		<!-- /#content -->
 	</div>
 	<!-- /#wrapper -->
-
 	<div id="footer-frill"></div>
 	<div id="footer">
 		<div class="wrapper">
@@ -287,12 +257,10 @@ body.custom-background {
 			</p>
 		</div>
 	</div>
-
 	<style>
 #ckepop table tr td {
 	border: none;
 }
-
 #ckepop table {
 	border: none;
 }
