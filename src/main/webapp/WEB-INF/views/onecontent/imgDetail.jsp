@@ -175,7 +175,7 @@ body.custom-background {
 	<script type='text/javascript'
 		src='${ctxStatic }/caodanJs/wp-embed.min.js'></script>
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="${imgDetail.foreignKey }" data-title="${imgDetai.imgTitle }" data-url="http://localhost:8080${pro }/one/imgDetail?sid=${imgDetail.foreignKey}"></div>
+	<div class="ds-thread" data-thread-key="${imgDetail.foreignKey }" data-title="${imgDetail.imgTitle }" data-url="http://localhost:8080${pro }/one/imgDetail?sid=${imgDetail.foreignKey}"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
