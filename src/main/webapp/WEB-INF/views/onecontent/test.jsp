@@ -99,21 +99,19 @@ body.custom-background {
 					</div>
 					<div class="content">
 						<h1 class="entry-title">
-							<a href="http://caodan.org/1389-photo.html" rel="bookmark">VOL.1389
-								潜流</a>
+							<a href="http://caodan.org/1389-photo.html" rel="bookmark">${imgInfo.imgTitle }</a>
 						</h1>
 						<div class="entry-content">
 							<p>
 								<a href="http://caodan.org/1389-photo.html"><img
-									src="http://caodan.org/wp-content/uploads/vol/1389.jpg"
+									src="${imgInfo.imgName }"
 									alt="VOL.1389 潜流" width="540" height="405"
 									class="aligncenter size-large" /></a>
 							<p style="text-align: right;">
-								潜流<br />郝朗 作品
+								${imgInfo.authorInfo }
 							</p>
 							<blockquote>
-								<p>所有的人，起初都只是空心人。所谓自我，只是一个模糊的影子，全靠书籍绘画音乐电影里他人的生命体验唤出方向，并用自己的精力去充填，渐渐成为实心人。而在这个由假及真的过程里，最具决定性的力量，是时间。是时间，让花纹深入了肌理，让口头上的主张浸染了情感的力量。by
-									韩松落</p>
+								<p>${imgInfo.imgText }</p>
 							</blockquote>
 						</div>
 						<!-- .entry-content -->
@@ -137,27 +135,18 @@ body.custom-background {
 						<a href="http://caodan.org/1389-content.html"
 							title="Permalink to VOL.1389 和你一起，残酷而浪漫地衰老" rel="bookmark">
 							<p>
-								<span class="day">26</span>7月 / 2016
+								${imgInfo.dateInfo }
 							</p>
 						</a>
 					</div>
 					<div class="content">
 						<h1 class="entry-title">
-							<a href="http://caodan.org/1389-content.html" rel="bookmark">VOL.1389
-								和你一起，残酷而浪漫地衰老</a>
+							<a href="http://caodan.org/1389-content.html" rel="bookmark">
+								${imgInfo.articleTitle }
+							</a>
 						</h1>
 						<div class="entry-content">
-							<p>周一</p>
-							<p>
-								衰老这件事，是我们最不愿意谈及的事之一，甚至超过了死亡。<br />  <br />
-								死亡是一个形而上的终极命题，谈论死亡带着对终点的遥望，带着哲学和审美的距离。<br />  <br />
-								而衰老，却是一天天发生在身边的，不是精神的而是物质的，琐碎，日常，迫近，没有美感。<br />  <br />
-								死亡不一定因为衰老，可能是发生在盛年的意外，也可能是一种自我选择。<br />  <br />
-								而衰老却不可避免地走向死亡，没有意外，没有选择。<br />  <br /> 所以，我们宁可高谈阔论死亡，也不愿意
-							</p>
-							<p class='read-more'>
-								<a href='http://caodan.org/1389-content.html'>阅读全文</a>
-							</p>
+								${imgInfo.articleShort }
 						</div>
 						<!-- .entry-content -->
 					</div>
@@ -182,28 +171,18 @@ body.custom-background {
 							title="Permalink to VOL.1389 有哪个瞬间曾让你怀疑你和你的兄弟/闺蜜可能并没有那么要好？"
 							rel="bookmark">
 							<p>
-								<span class="day">26</span>7月 / 2016
+								${imgInfo.dateInfo }
 							</p>
 						</a>
 					</div>
 					<div class="content">
 						<h1 class="entry-title">
-							<a href="http://caodan.org/1389-ask.html" rel="bookmark">VOL.1389
-								有哪个瞬间曾让你怀疑你和你的兄弟/闺蜜可能并没有那么要好？</a>
+							<a href="http://caodan.org/1389-ask.html" rel="bookmark">
+								${imgInfo.questionTitle }
+							</a>
 						</h1>
 						<div class="entry-content">
-							<div class="cuestion-contenido">@一个App工作室
-								问：有哪个瞬间曾让你怀疑你和你的兄弟/闺蜜可能并没有那么要好？</div>
-							<div class="cuestion-a-icono"></div>
-							<h4>网友答@一个App工作室 ：</h4>
-							<div class="cuestion-contenido">
-								@-潘志远-：和一群好兄弟走在街上，我蹲下来系鞋带，他们依然有说有笑，自顾自往前走。<br />  <br />
-								@qiqitears：几乎从不评论也不点赞我的朋友圈，还说不评论不点赞也不代表什么。<br />  <br />
-								@牛鈺傑：年少无知犯错误进了派出所，他就跟警察说：“这事和我没关系，都是他俩的事。”瞬间我心都凉了。出
-							</div>
-							<p class='read-more'>
-								<a href='http://caodan.org/1389-ask.html'>阅读全文</a>
-							</p>
+							${imgInfo.questionShort }
 						</div>
 						<!-- .entry-content -->
 					</div>
@@ -222,11 +201,16 @@ body.custom-background {
 				<div class="pagination">
 					<p class="clearfix">
 					<div class='wp-pagenavi'>
-						<span class='pages'>第 ${imgInfo.currentPage} 页，共 ${imgInfo.totalPage} 页</span><a
+						<span class='pages'>第 ${imgInfo.currentPage} 页，共 ${imgInfo.totalPage} 页</span>
+						<span style="position:relative;left: 50%;border: 0px;">
+							<a class="page larger" href="http://localhost:8080/jeesite/one/test?page=${imgInfo.currentPage-1 }">上一页</a>
+							<a class="page larger" href="http://localhost:8080/jeesite/one/test?page=${imgInfo.currentPage+1 }">下一页</a>
+						</span>
+						<!-- <a
 							class="previouspostslink" rel="prev" href="#">«</a>
 							<a
 							class="page smaller" href="#">1</a><span class='current'>2</span><a
-							class="page larger" href="#">2</a><a class="page larger" href="#">2</a><a
+							class="page larger" href="#">3</a><a class="page larger" href="#">4</a><a
 							class="page larger" href="http://localhost:8080/jeesite/one/test?page=1">5</a><a
 							class="page larger" href="http://caodan.org/page/6">6</a><a
 							class="page larger" href="http://caodan.org/page/7">7</a><a
@@ -238,7 +222,7 @@ body.custom-background {
 							href="http://caodan.org/page/30">30</a><a class="larger page"
 							href="http://caodan.org/page/40">40</a><span class='extend'>...</span><a
 							class="nextpostslink" rel="next" href="http://caodan.org/page/3">»</a><a
-							class="last" href="http://caodan.org/page/1389">最旧 »</a>
+							class="last" href="http://caodan.org/page/1389">最旧 »</a> -->
 					</div>
 					</p>
 				</div>

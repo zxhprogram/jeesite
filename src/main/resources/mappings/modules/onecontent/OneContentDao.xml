@@ -3,7 +3,11 @@
 <mapper namespace="com.thinkgem.jeesite.modules.onecontent.dao.OneContentDao">
 	<select id="queryImgInfoByPage" parameterType="int" resultType="com.thinkgem.jeesite.modules.onecontent.entity.ImgInfo">
 		select 
-			sid as sid,imgName as imgName,imgText as imgText,(select count(sid) from imginfo) as totalPage from imginfo 
+			sid as sid,imgName as imgName,imgText as imgText,authorInfo as authorInfo,
+			imgTitle as imgTitle,dateInfo as dateInfo,articleTitle as articleTitle,
+			questionTitle as questionTitle,articleShort as articleShort,questionShort as questionShort,
+			(select count(sid) from imginfo) as totalPage 
+		from imginfo 
 		limit
 			#{page},1
 	</select>

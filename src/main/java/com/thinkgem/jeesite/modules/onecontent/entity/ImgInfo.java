@@ -4,6 +4,13 @@ public class ImgInfo {
 	private Integer sid;
 	private String imgName;
 	private String imgText;
+	private String authorInfo;
+	private String imgTitle;
+	private String dateInfo;
+	private String articleTitle;
+	private String questionTitle;
+	private String articleShort;
+	private String questionShort;
 	private int totalPage;
 	private int currentPage;
 	public Integer getSid() {
@@ -35,6 +42,48 @@ public class ImgInfo {
 	}
 	public void setCurrentPage(int currentPage) {
 		this.currentPage = currentPage;
+	}
+	public String getAuthorInfo() {
+		return authorInfo;
+	}
+	public void setAuthorInfo(String authorInfo) {
+		this.authorInfo = authorInfo;
+	}
+	public String getImgTitle() {
+		return imgTitle;
+	}
+	public void setImgTitle(String imgTitle) {
+		this.imgTitle = imgTitle;
+	}
+	public String getArticleTitle() {
+		return articleTitle;
+	}
+	public void setArticleTitle(String articleTitle) {
+		this.articleTitle = articleTitle;
+	}
+	public String getQuestionTitle() {
+		return questionTitle;
+	}
+	public void setQuestionTitle(String questionTitle) {
+		this.questionTitle = questionTitle;
+	}
+	public String getDateInfo() {
+		return dateInfo;
+	}
+	public void setDateInfo(String dateInfo) {
+		this.dateInfo = dateInfo;
+	}
+	public String getArticleShort() {
+		return articleShort;
+	}
+	public void setArticleShort(String articleShort) {
+		this.articleShort = articleShort;
+	}
+	public String getQuestionShort() {
+		return questionShort;
+	}
+	public void setQuestionShort(String questionShort) {
+		this.questionShort = questionShort;
 	}
 	
 }

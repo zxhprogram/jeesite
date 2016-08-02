@@ -28,18 +28,25 @@ public class DataGerneration {
 		try {
         	String oriU = "http://caodan.org/page/";
 			List params = new ArrayList();
-			for (int i = 136; i <= 1389; i++) {
+			for (int i = 137; i <= 137; i++) {
 				String url = oriU + i;
 				System.out.println("本次访问地址是："+url);
 				Document dc = Jsoup.connect(url).get();
 				Elements img = dc.select("[class=entry-content]");
 				String imgUrl = img.get(0).child(0).child(0).child(0).attr("src");
 				Elements text = dc.select("blockquote");
-				String con = text.get(0).child(0).text();
+				Elements imgTitleEle = dc.select("[class=entry-title]");
+				String imgTitle = imgTitleEle.get(0).child(0).text();
+				String articleTitle = imgTitleEle.get(1).child(0).text();
+//				String con = text.get(0).child(0).text();
+				params.add(imgTitle);
 				params.add(imgUrl);
-				params.add(con);
-				saveImg(imgUrl,params);
-				params.clear();
+//				params.add(con);
+//				saveImg(imgUrl,params);
+//				JdbcUtils ju = new JdbcUtils();
+//				ju.updateByPreparedStatement("update imginfo set imgTitle=? where imgName=?", params);
+//				ju.releaseConn();
+//				params.clear();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
