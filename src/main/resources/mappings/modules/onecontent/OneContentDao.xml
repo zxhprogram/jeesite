@@ -16,7 +16,8 @@
 		select 
 			sid as sid, imgUrl as imgUrl,imgTitle as imgTitle,
 			imgText as imgText ,foreignKey as foreignKey,
-			(select authorInfo from imgInfo a where a.sid = #{foreign}) as authorInfo
+			(select authorInfo from imgInfo a where a.sid = #{foreign}) as authorInfo,
+			(select dateInfo from imgInfo b where b.sid = #{foreign}) as dateInfo
 		from
 			imgDetail
 		where

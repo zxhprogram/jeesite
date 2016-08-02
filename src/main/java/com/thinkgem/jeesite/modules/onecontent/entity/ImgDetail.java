@@ -7,6 +7,7 @@ public class ImgDetail {
 	private String imgText;
 	private int foreignKey;
 	private String authorInfo;
+	private String dateInfo;
 	public int getSid() {
 		return sid;
 	}
@@ -42,6 +43,12 @@ public class ImgDetail {
 	}
 	public void setAuthorInfo(String authorInfo) {
 		this.authorInfo = authorInfo;
+	}
+	public String getDateInfo() {
+		return dateInfo;
+	}
+	public void setDateInfo(String dateInfo) {
+		this.dateInfo = dateInfo;
 	}
 	
 }
