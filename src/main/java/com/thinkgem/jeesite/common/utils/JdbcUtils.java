@@ -219,6 +219,7 @@ public class JdbcUtils {
         if(resultSet != null){  
             try{  
                 resultSet.close();  
+                System.out.println("连接关闭——————————————————————");
             }catch(SQLException e){  
                 e.printStackTrace();  
             }  

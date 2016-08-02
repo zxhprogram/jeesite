@@ -10,6 +10,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -28,25 +29,33 @@ public class DataGerneration {
 		try {
         	String oriU = "http://caodan.org/page/";
 			List params = new ArrayList();
-			for (int i = 137; i <= 137; i++) {
+			for (int i = 3; i <= 124; i++) {
 				String url = oriU + i;
 				System.out.println("本次访问地址是："+url);
 				Document dc = Jsoup.connect(url).get();
-				Elements img = dc.select("[class=entry-content]");
-				String imgUrl = img.get(0).child(0).child(0).child(0).attr("src");
-				Elements text = dc.select("blockquote");
-				Elements imgTitleEle = dc.select("[class=entry-title]");
-				String imgTitle = imgTitleEle.get(0).child(0).text();
-				String articleTitle = imgTitleEle.get(1).child(0).text();
-//				String con = text.get(0).child(0).text();
-				params.add(imgTitle);
+				Elements TargetAddr = dc.select("[class=entry-title]");
+				String target = TargetAddr.get(0).child(0).attr("href");
+				System.out.println("访问页面中的子地址："+target);
+				Document tdc = Jsoup.connect(target).get();
+				Elements titleEle = tdc.select("[class=entry-title]");
+				//图片标题
+				String title = titleEle.get(0).text();
+				//图片地址
+				Elements imgTag = tdc.getElementsByTag("img");
+				String imgUrl = imgTag.get(0).attr("src");
+				String imgText = tdc.getElementsByTag("blockquote").get(0).child(0).text();
+				params.add(title);
+				JdbcUtils ju = new JdbcUtils();
+				Map<String, Object> map = ju.findSimpleResult("select sid from imginfo where imgTitle=?", params);
+				int sid = (Integer) map.get("sid");
 				params.add(imgUrl);
-//				params.add(con);
-//				saveImg(imgUrl,params);
-//				JdbcUtils ju = new JdbcUtils();
-//				ju.updateByPreparedStatement("update imginfo set imgTitle=? where imgName=?", params);
-//				ju.releaseConn();
-//				params.clear();
+				params.add(imgText);
+				params.add(sid);
+				ju.updateByPreparedStatement("insert into imgDetail "
+						+ "(imgTitle,imgUrl,imgText,foreignKey) "
+						+ "values(?,?,?,?)", params);
+				ju.releaseConn();
+				params.clear();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -11,4 +11,15 @@
 		limit
 			#{page},1
 	</select>
+	
+	<select id="queryImgDetailByForeignKey" parameterType="int" resultType="com.thinkgem.jeesite.modules.onecontent.entity.ImgDetail">
+		select 
+			sid as sid, imgUrl as imgUrl,imgTitle as imgTitle,
+			imgText as imgText ,foreignKey as foreignKey,
+			(select authorInfo from imgInfo a where a.sid = #{foreign}) as authorInfo
+		from
+			imgDetail
+		where
+			foreignKey = #{foreign}
+	</select>
 </mapper>

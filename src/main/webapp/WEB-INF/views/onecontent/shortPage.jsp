@@ -90,20 +90,20 @@ body.custom-background {
 				<div id="post-4278"
 					class="post-4278 post type-post status-publish format-standard hentry category-photo">
 					<div class="date">
-						<a href="http://caodan.org/1389-photo.html"
+						<a href="${pro}/one/imgDetail?sid=${imgInfo.sid}"
 							title="Permalink to VOL.1389 潜流" rel="bookmark">
 							<p>
-								<span class="day">26</span>7月 / 2016
+								${imgInfo.dateInfo }
 							</p>
 						</a>
 					</div>
 					<div class="content">
 						<h1 class="entry-title">
-							<a href="http://caodan.org/1389-photo.html" rel="bookmark">${imgInfo.imgTitle }</a>
+							<a href="${pro}/one/imgDetail?sid=${imgInfo.sid}" rel="bookmark">${imgInfo.imgTitle }</a>
 						</h1>
 						<div class="entry-content">
 							<p>
-								<a href="http://caodan.org/1389-photo.html"><img
+								<a href="${pro}/one/imgDetail?sid=${imgInfo.sid}"><img
 									src="${imgInfo.imgName }"
 									alt="VOL.1389 潜流" width="540" height="405"
 									class="aligncenter size-large" /></a>
@@ -120,9 +120,9 @@ body.custom-background {
 					<div class="info">
 						<p>
 							<span class="permalink"><a
-								href="http://caodan.org/1389-photo.html" rel="bookmark">Permalink</a></span>
+								href="${pro}/one/imgDetail?sid=${imgInfo.sid}" rel="bookmark">Permalink</a></span>
 							<span class="notes"><a
-								href="http://caodan.org/1389-photo.html#respond"
+								href="${pro}/one/imgDetail?sid=${imgInfo.sid}"
 								class="ds-thread-count" data-thread-key="4278">Leave a
 									comment</a></span>
 						</p>
@@ -203,26 +203,13 @@ body.custom-background {
 					<div class='wp-pagenavi'>
 						<span class='pages'>第 ${imgInfo.currentPage} 页，共 ${imgInfo.totalPage} 页</span>
 						<span style="position:relative;left: 50%;border: 0px;">
-							<a class="page larger" href="http://localhost:8080/jeesite/one/test?page=${imgInfo.currentPage-1 }">上一页</a>
-							<a class="page larger" href="http://localhost:8080/jeesite/one/test?page=${imgInfo.currentPage+1 }">下一页</a>
+							<c:if test="${imgInfo.currentPage-1>0 }">
+								<a class="page larger" href="${pro }/one/shortPage?page=${imgInfo.currentPage-1 }">上一页</a>
+							</c:if>
+							<c:if test="${imgInfo.currentPage+1<=imgInfo.totalPage }">
+								<a class="page larger" href="${pro }/one/shortPage?page=${imgInfo.currentPage+1 }">下一页</a>
+							</c:if>
 						</span>
-						<!-- <a
-							class="previouspostslink" rel="prev" href="#">«</a>
-							<a
-							class="page smaller" href="#">1</a><span class='current'>2</span><a
-							class="page larger" href="#">3</a><a class="page larger" href="#">4</a><a
-							class="page larger" href="http://localhost:8080/jeesite/one/test?page=1">5</a><a
-							class="page larger" href="http://caodan.org/page/6">6</a><a
-							class="page larger" href="http://caodan.org/page/7">7</a><a
-							class="page larger" href="http://caodan.org/page/8">8</a><a
-							class="page larger" href="http://caodan.org/page/9">9</a><a
-							class="page larger" href="http://caodan.org/page/10">10</a><span
-							class='extend'>...</span><a class="larger page"
-							href="http://caodan.org/page/20">20</a><a class="larger page"
-							href="http://caodan.org/page/30">30</a><a class="larger page"
-							href="http://caodan.org/page/40">40</a><span class='extend'>...</span><a
-							class="nextpostslink" rel="next" href="http://caodan.org/page/3">»</a><a
-							class="last" href="http://caodan.org/page/1389">最旧 »</a> -->
 					</div>
 					</p>
 				</div>
@@ -250,5 +237,6 @@ body.custom-background {
 	border: none;
 }
 </style>
+
 </body>
 </html>

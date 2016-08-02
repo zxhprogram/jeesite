@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.thinkgem.jeesite.modules.onecontent.dao.OneContentDao;
+import com.thinkgem.jeesite.modules.onecontent.entity.ImgDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgInfo;
 
 @Service
@@ -15,5 +16,9 @@ public class OneContentService {
 	
 	public ImgInfo queryImgInfoByPage(int page){
 		return dao.queryImgInfoByPage(page);
+	}
+	
+	public ImgDetail queryImgDetailPage(int foreign){
+		return dao.queryImgDetailByForeignKey(foreign);
 	}
 }
