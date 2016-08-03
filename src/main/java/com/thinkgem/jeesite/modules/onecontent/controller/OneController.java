@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.thinkgem.jeesite.modules.onecontent.entity.ArticleDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgInfo;
 import com.thinkgem.jeesite.modules.onecontent.service.OneContentService;
@@ -31,5 +32,13 @@ public class OneController {
 		ImgDetail imgDetail = service.queryImgDetailPage(Integer.valueOf(req.getParameter("sid")));
 		model.addAttribute("imgDetail", imgDetail);
 		return "onecontent/imgDetail";
+	}
+	
+	@RequestMapping("/articleDetail")
+	public String articleDetail(HttpServletRequest req,Model model){
+		ArticleDetail articleDetail = service.queryArticleDetailPage(Integer.valueOf(req.getParameter("sid")));
+		articleDetail.setForeignKey(Integer.valueOf(req.getParameter("sid")));
+		model.addAttribute("articleDetail", articleDetail);
+		return "onecontent/articleDetail";
 	}
 }
