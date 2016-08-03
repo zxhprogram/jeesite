@@ -136,9 +136,9 @@ body.custom-background {
 			</div>
 			<div class="pagination">
 				<p class="clearfix">
-					<a href="http://caodan.org/848-content.html" rel="prev"><span
+					<a href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey-1}" rel="prev"><span
 						class="older"><span class="meta-nav">&larr;</span> 上一页
-							</span></a><a href="http://caodan.org/849-ask.html" rel="next"><span
+							</span></a><a href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey+1}" rel="next"><span
 						class="newer">下一页 <span class="meta-nav">&rarr;</span></span></a>
 				</p>
 			</div>
