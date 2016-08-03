@@ -23,6 +23,9 @@ public class OneController {
 	public String shortPage(HttpServletRequest req,Model model){
 		int page = Integer.valueOf(req.getParameter("page"));
 		ImgInfo imgInfo = service.queryImgInfoByPage(page);
+		if (imgInfo==null) {
+			return "onecontent/notFoundPage";
+		}
 		imgInfo.setCurrentPage(page);
 		model.addAttribute("imgInfo", imgInfo);
 		return "onecontent/shortPage";
@@ -31,6 +34,9 @@ public class OneController {
 	@RequestMapping("/imgDetail")
 	public String imgDetailPage(HttpServletRequest req,Model model){
 		ImgDetail imgDetail = service.queryImgDetailPage(Integer.valueOf(req.getParameter("sid")));
+		if (imgDetail==null) {
+			return "onecontent/notFoundPage";
+		}
 		model.addAttribute("imgDetail", imgDetail);
 		return "onecontent/imgDetail";
 	}
@@ -38,6 +44,9 @@ public class OneController {
 	@RequestMapping("/articleDetail")
 	public String articleDetail(HttpServletRequest req,Model model){
 		ArticleDetail articleDetail = service.queryArticleDetailPage(Integer.valueOf(req.getParameter("sid")));
+		if(articleDetail==null){
+			return "onecontent/notFoundPage";
+		}
 		articleDetail.setForeignKey(Integer.valueOf(req.getParameter("sid")));
 		model.addAttribute("articleDetail", articleDetail);
 		return "onecontent/articleDetail";
@@ -46,6 +55,9 @@ public class OneController {
 	@RequestMapping("/questionDetail")
 	public String questionDetail(HttpServletRequest req,Model model){
 		QuestionDetail questionDetail = service.queryQuestionDetailPage(Integer.valueOf(req.getParameter("sid")));
+		if(questionDetail==null){
+			return "onecontent/notFoundPage";
+		}
 		questionDetail.setForeignKey(Integer.valueOf(req.getParameter("sid")));
 		model.addAttribute("questionDetail", questionDetail);
 		return "onecontent/questionDetail";
