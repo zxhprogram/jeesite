@@ -132,7 +132,7 @@ body.custom-background {
 				<div id="post-4279"
 					class="post-4279 post type-post status-publish format-standard hentry category-content">
 					<div class="date">
-						<a href="http://caodan.org/1389-content.html"
+						<a href="${pro}/one/articleDetail?sid=${imgInfo.sid}"
 							title="Permalink to VOL.1389 和你一起，残酷而浪漫地衰老" rel="bookmark">
 							<p>
 								${imgInfo.dateInfo }
@@ -141,7 +141,7 @@ body.custom-background {
 					</div>
 					<div class="content">
 						<h1 class="entry-title">
-							<a href="http://caodan.org/1389-content.html" rel="bookmark">
+							<a href="${pro}/one/articleDetail?sid=${imgInfo.sid}" rel="bookmark">
 								${imgInfo.articleTitle }
 							</a>
 						</h1>
@@ -154,10 +154,10 @@ body.custom-background {
 					<div class="info">
 						<p>
 							<span class="permalink"><a
-								href="http://caodan.org/1389-content.html" rel="bookmark">Permalink</a></span>
+								href="${pro}/one/articleDetail?sid=${imgInfo.sid}" rel="bookmark">Permalink</a></span>
 
 							<span class="notes"><a
-								href="http://caodan.org/1389-content.html#respond"
+								href="${pro}/one/articleDetail?sid=${imgInfo.sid}#respond"
 								class="ds-thread-count" data-thread-key="4279">Leave a
 									comment</a></span>
 						</p>
@@ -167,7 +167,7 @@ body.custom-background {
 				<div id="post-4280"
 					class="post-4280 post type-post status-publish format-standard hentry category-ask">
 					<div class="date">
-						<a href="http://caodan.org/1389-ask.html"
+						<a href="${pro }/one/questionDetail?sid=${imgInfo.sid}"
 							title="Permalink to VOL.1389 有哪个瞬间曾让你怀疑你和你的兄弟/闺蜜可能并没有那么要好？"
 							rel="bookmark">
 							<p>
@@ -177,7 +177,7 @@ body.custom-background {
 					</div>
 					<div class="content">
 						<h1 class="entry-title">
-							<a href="http://caodan.org/1389-ask.html" rel="bookmark">
+							<a href="${pro }/one/questionDetail?sid=${imgInfo.sid}" rel="bookmark">
 								${imgInfo.questionTitle }
 							</a>
 						</h1>
@@ -190,9 +190,9 @@ body.custom-background {
 					<div class="info">
 						<p>
 							<span class="permalink"><a
-								href="http://caodan.org/1389-ask.html" rel="bookmark">Permalink</a></span>
+								href="${pro }/one/questionDetail?sid=${imgInfo.sid}" rel="bookmark">Permalink</a></span>
 							<span class="notes"><a
-								href="http://caodan.org/1389-ask.html#comments"
+								href="${pro }/one/questionDetail?sid=${imgInfo.sid}#comments"
 								class="ds-thread-count" data-thread-key="4280">1 Comment</a></span>
 						</p>
 					</div>

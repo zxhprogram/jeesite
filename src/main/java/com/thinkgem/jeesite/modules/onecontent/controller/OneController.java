@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.thinkgem.jeesite.modules.onecontent.entity.ArticleDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgInfo;
+import com.thinkgem.jeesite.modules.onecontent.entity.QuestionDetail;
 import com.thinkgem.jeesite.modules.onecontent.service.OneContentService;
 
 @Controller
@@ -40,5 +41,13 @@ public class OneController {
 		articleDetail.setForeignKey(Integer.valueOf(req.getParameter("sid")));
 		model.addAttribute("articleDetail", articleDetail);
 		return "onecontent/articleDetail";
+	}
+	
+	@RequestMapping("/questionDetail")
+	public String questionDetail(HttpServletRequest req,Model model){
+		QuestionDetail questionDetail = service.queryQuestionDetailPage(Integer.valueOf(req.getParameter("sid")));
+		questionDetail.setForeignKey(Integer.valueOf(req.getParameter("sid")));
+		model.addAttribute("questionDetail", questionDetail);
+		return "onecontent/questionDetail";
 	}
 }

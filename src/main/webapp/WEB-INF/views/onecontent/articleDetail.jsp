@@ -160,7 +160,7 @@ body.custom-background {
 }
 </style>
 <!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="${articleDetail.foreignKey}" data-title="${articleDetail.articleTitle}" data-url="http://localhost:8080${pro }/one/articleDetail?sid=${articleDetail.foreignKey}"></div>
+<div class="ds-thread" data-thread-key="article${articleDetail.foreignKey}" data-title="${articleDetail.articleTitle}" data-url="http://localhost:8080${pro }/one/articleDetail?sid=${articleDetail.foreignKey}"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">

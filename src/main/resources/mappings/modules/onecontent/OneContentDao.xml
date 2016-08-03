@@ -34,4 +34,16 @@
 		where
 			foreignKey = #{foreign}
 	</select>
+	
+	<select id="queryQuestionDetailPage" parameterType="int" resultType="com.thinkgem.jeesite.modules.onecontent.entity.QuestionDetail">
+		select 
+			sid as sid,questionTitle as questionTitle,questionContent as questionContent,
+			questionBigTitle as questionBigTitle,questionMan as questionMan,questionEditor as questionEditor,
+			(select dateInfo from imgInfo b where b.sid = #{foreign}) as dateInfo,
+			createDate as createDate,foreignKey as foreignKey
+		from
+			questionDetail
+		where
+			foreignKey = #{foreign}
+	</select>
 </mapper>

@@ -8,6 +8,7 @@ import com.thinkgem.jeesite.modules.onecontent.dao.OneContentDao;
 import com.thinkgem.jeesite.modules.onecontent.entity.ArticleDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgDetail;
 import com.thinkgem.jeesite.modules.onecontent.entity.ImgInfo;
+import com.thinkgem.jeesite.modules.onecontent.entity.QuestionDetail;
 
 @Service
 @Transactional(readOnly = true)
@@ -25,5 +26,9 @@ public class OneContentService {
 	
 	public ArticleDetail queryArticleDetailPage(int foreign){
 		return dao.queryArticleDetailPage(foreign);
+	}
+	
+	public QuestionDetail queryQuestionDetailPage(int foreign){
+		return dao.queryQuestionDetailPage(foreign);
 	}
 }

@@ -15,7 +15,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="UTF-8" />
-<title>${imgDetail.imgTitle }</title>
+<title>${questionDetail.questionTitle }</title>
 <style type="text/css">
 img.wp-smiley, img.emoji {
 	display: inline !important;
@@ -30,22 +30,21 @@ img.wp-smiley, img.emoji {
 }
 </style>
 <link rel='stylesheet' id='wp-pagenavi-css'
-	href='${ctxStatic }/css/pagenavi-css.css'
-	type='text/css' media='all' />
+	href='${ctxStatic }/css/pagenavi-css.css' type='text/css' media='all' />
 <link rel='stylesheet' id='pinktouch-css'
-	href='${ctxStatic }/css/style.css'
-	type='text/css' media='all' />
+	href='${ctxStatic }/css/style.css' type='text/css' media='all' />
 <link rel='stylesheet' id='arvo-css'
-	href='${ctxStatic}/css/font-awesome.min.css'
-	type='text/css' media='all' />
-<link rel='prev' title='VOL.848 猫语症'
-	href='http://caodan.org/848-content.html' />
-<link rel='next' title='VOL.849 你和Ta的友谊是怎么变淡的？'
-	href='http://caodan.org/849-ask.html' />
+	href='${ctxStatic }/css/font-awesome.min.css' type='text/css'
+	media='all' />
+<link rel='prev' title='VOL.1389 潜流'
+	href='http://caodan.org/1389-photo.html' />
+<link rel='next' title='VOL.1390 一次失败的复仇计划'
+	href='http://caodan.org/1390-content.html' />
+<link rel="canonical" href="http://caodan.org/1390-ask.html" />
+<link rel='shortlink' href='http://caodan.org/?p=4283' />
 <style type="text/css" id="custom-background-css">
 body.custom-background {
-	background-image:
-		url('${ctxStatic}/img/bg.jpg');
+	background-image: url('${ctxStatic}/img/bg.jpg');
 	background-repeat: repeat;
 	background-position: top left;
 	background-attachment: scroll;
@@ -54,7 +53,7 @@ body.custom-background {
 </head>
 
 <body
-	class="single single-post postid-2636 single-format-standard custom-background">
+	class="single single-post postid-4283 single-format-standard custom-background">
 	<div id="wrapper">
 		<div id="navigation">
 			<div class="wrapper clearfix">
@@ -94,58 +93,59 @@ body.custom-background {
 		<!-- /#header -->
 
 		<div id="content">
-			<div id="post-2636"
-				class="post-2636 post type-post status-publish format-standard hentry category-photo">
+			<div id="post-4283"
+				class="post-4283 post type-post status-publish format-standard hentry category-ask">
 				<div class="date">
-					<a href="http://caodan.org/848-photo.html"
-						title="Permalink to VOL.848 一个人也要吃火锅" rel="bookmark">
-						<p>
-							${imgDetail.dateInfo }
-						</p>
+					<a href="http://caodan.org/1390-ask.html"
+						title="Permalink to ${questionDetail.questionTitle }"
+						rel="bookmark">
+						<p>${questionDetail.dateInfo }</p>
 					</a>
 				</div>
 
 				<div class="content">
-					<h1 class="entry-title">${imgDetail.imgTitle}</h1>
+					<h1 class="entry-title">${questionDetail.questionTitle }</h1>
 					<div class="entry-content">
 						<div style="clear: both; margin-top: 5px; margin-bottom: 5px;"></div>
 						<div style="clear: both; margin-top: 5px; margin-bottom: 5px;"></div>
-						<p>
-							<a href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey}"><img
-								src="${imgDetail.imgUrl }"
-								alt="${imgDetail.imgTitle }" width="540" height="405"
-								class="aligncenter size-large" /></a>
-						<p style="text-align: right;">
-							${imgDetail.authorInfo }
-						</p>
-						<blockquote>
-							<p>${imgDetail.imgText }</p>
-						</blockquote>
+						<div class="cuestion-contenido">${questionDetail.questionBigTitle }</div>
+						<hr />
+						<div class="cuestion-a-icono"></div>
+						<h4>${questionDetail.questionMan }</h4>
+						<div class="cuestion-contenido">
+							${questionDetail.questionContent }</div>
+						<p class="cuestion-editor">${questionDetail.questionEditor }</p>
 					</div>
+					<!-- .entry-content -->
 				</div>
+				<!-- .content -->
+
 				<div class="info">
 					<p>
 						<span class="permalink"><a
-							href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey}" rel="bookmark">重新加载</a></span>
-
+							href="http://caodan.org/1390-ask.html" rel="bookmark">Permalink</a></span>
 						<span class="notes"><a
-							href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey}"
-							class="ds-thread-count" data-thread-key="2636">评论</a></span>
+							href="http://caodan.org/1390-ask.html#comments"
+							class="ds-thread-count" data-thread-key="4283">1 Comment</a></span>
 					</p>
 				</div>
 			</div>
+			<!-- /.post -->
 			<div class="pagination">
 				<p class="clearfix">
-					<a href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey-1}" rel="prev"><span
-						class="older"><span class="meta-nav">&larr;</span> 上一页
-							</span></a><a href="${pro }/one/imgDetail?sid=${imgDetail.foreignKey+1}" rel="next"><span
-						class="newer">下一页 <span class="meta-nav">&rarr;</span></span></a>
+					<a href="${pro }/one/questionDetail?sid=${questionDetail.foreignKey-1}" rel="prev"><span
+						class="older"><span class="meta-nav">&larr;</span> Previous
+							post</span></a><a href="${pro }/one/questionDetail?sid=${questionDetail.foreignKey+1}" rel="next"><span
+						class="newer">Next post <span class="meta-nav">&rarr;</span></span></a>
 				</p>
 			</div>
+
+			<a name="comments"></a>
 		</div>
 		<!-- /#content -->
 	</div>
 	<!-- /#wrapper -->
+
 	<div id="footer-frill"></div>
 	<div id="footer">
 		<div class="wrapper">
@@ -153,10 +153,6 @@ body.custom-background {
 				《ONE·一个》 非官方网站，仅为方便无iOS设备网友阅读<span class="sep"> | </span>Powered by
 				<a href="http://wordpress.org/" rel="generator">WordPress</a><span
 					class="sep"> | </span>
-				<script type="text/javascript">
-					var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-					document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2a74d83da8869eaedf01b7050dc0a84f' type='text/javascript'%3E%3C/script%3E"));
-				</script>
 			</p>
 		</div>
 	</div>
@@ -170,12 +166,11 @@ body.custom-background {
 	border: none;
 }
 </style>
-	<script type='text/javascript'
-		src='${ctxStatic }/caodanJs/comment-reply.min.js'></script>
-	<script type='text/javascript'
-		src='${ctxStatic }/caodanJs/wp-embed.min.js'></script>
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="img${imgDetail.foreignKey }" data-title="${imgDetail.imgTitle }" data-url="http://localhost:8080${pro }/one/imgDetail?sid=${imgDetail.foreignKey}"></div>
+	<div class="ds-thread"
+		data-thread-key="que${questionDetail.foreignKey }"
+		data-title="${questionDetail.questionTitle }"
+		data-url="http://localhost:8080${pro }/one/questionDetail?sid=${questionDetail.foreignKey}"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -189,6 +184,7 @@ body.custom-background {
 			 || document.getElementsByTagName('body')[0]).appendChild(ds);
 		})();
 	</script>
-<!-- 多说公共JS代码 end -->
+	<!-- 多说公共JS代码 end -->
+
 </body>
 </html>
