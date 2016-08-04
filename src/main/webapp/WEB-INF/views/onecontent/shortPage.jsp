@@ -50,29 +50,7 @@ body.custom-background {
 </head>
 <body class="home blog paged custom-background paged-2">
 	<div id="wrapper">
-		<div id="navigation">
-			<div class="wrapper clearfix">
-				<div id="nav-menu" class="menu-%e8%8f%9c%e5%8d%951-container">
-					<ul id="menu-%e8%8f%9c%e5%8d%951" class="menu">
-						<li id="menu-item-1319"
-							class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-1319"><a
-							href="http://caodan.org">首页</a></li>
-						<li id="menu-item-1317"
-							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1317"><a
-							href="http://caodan.org/archives">过往</a></li>
-						<li id="menu-item-1318"
-							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1318"><a
-							href="http://caodan.org/about">关于</a></li>
-						<li id="menu-item-1368"
-							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1368"><a
-							href="http://caodan.org/random">手气不错</a></li>
-					</ul>
-				</div>
-				<form method="get" id="searchfield" action="http://caodan.org/">
-					<input name="s" type="text" placeholder="Search" value="" />
-				</form>
-			</div>
-		</div>
+		<%@ include file="/WEB-INF/views/include/navigation.jsp"%>
 		<!-- /#navigation -->
 		<div id="navigation-frill"></div>
 		<div id="header">
